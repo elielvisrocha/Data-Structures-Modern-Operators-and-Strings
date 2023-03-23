@@ -25,8 +25,75 @@ const restaurant = {
       open: 0, // Open 24 hours
       close: 24,
     },
-  },
+  },  
+
+  orderDelivery: function({sat}) {
+    return console.log(sat)
+  }
 };
+
+const { name, openingHours, categories } = restaurant;
+
+restaurant.orderDelivery(openingHours);
+
+
+// const {sat: day} = restaurant.openingHours;
+
+// console.log(day)
+
+
+// DESESTRUCTURE OBJECTS
+
+
+
+// console.log(name, openingHours, categories);
+
+
+
+// const {
+//   name: restaurantName,
+//   openingHours: hours,
+//   categories: tags,
+// } = restaurant;
+
+// console.log(restaurantName, hours, tags);
+
+
+// // DEFAULT VALUES
+
+// const {menu = [], starterMenu: startes =[]} = restaurant;
+
+// console.log(menu, startes);
+
+// MUTATING VARIABLES
+
+// let a = 111;
+// let b = 999;
+
+// const obj = {
+//   a: 3, b: 8
+// };
+
+
+// ({a, b} = obj);
+// console.log(a, b)
+
+
+// const { fri: {close, open}} = openingHours;
+
+// console.log(close, open);
+
+/*
+const { fri: {close, open}} = restaurant.openingHours;
+console.log(close, open)
+*/
+
+// const { fri: {close: o, open: x}} = openingHours;
+
+// console.log(o, x);
+
+
+
 
 
 // NESTED DESESTRUCTURING
@@ -118,3 +185,8 @@ const restaurant = {
     // Data needed for a later exercise
     // const flights =
     //   '_Delayed_Departure;fao93766109;txl2133758440;11:25+_Arrival;bru0943384722;fao93766109;11:45+_Delayed_Arrival;hel7439299980;fao93766109;12:05+_Departure;fao93766109;lis2323639855;12:30';
+
+
+
+
+  
