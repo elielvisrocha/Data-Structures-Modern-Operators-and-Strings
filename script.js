@@ -1,99 +1,82 @@
 'use strict';
 
+
+// use any data type, return any data type, short-circuting;
+
+// -------- OR ------------
+
+// console.log(3 || 'Elvis');
+// console.log('' || 'Elvis');
+// console.log(true || false);
+// console.log(undefined || null);
+
+// console.log(undefined || 0 || '' || 'hello' || 34 || null);
+
+// const me = {
+//     name: 'Elvis'
+// }
+
+// // me.age = 12;
+// me.age = 0(FALSE!!!!!!!!!);
+// console.log(me.age || me.name);
+
+
+// -------- AND ------------
+
+
+// const me = {
+//     name: 'Elvis',
+//     showName: function () {
+//         return console.log(this.name);
+//     }
+// }
+
+// me.showName && me.showName();
+
+
+// THE NULLISH COALESCING OPERATOR;
+
+const me = {
+    name: 'Elvis'
+}
+
+// me.age = 12;
+
+// Nullish: null and undefined (not 0 or '');
+
+me.age = 0;
+console.log(me.age ?? me.name);
+
+
+
+
 // Data needed for first part of the section
-const restaurant = {
-  name: 'Classico Italiano',
-  location: 'Via Angelo Tavanti 23, Firenze, Italy',
-  categories: ['Italian', 'Pizzeria', 'Vegetarian', 'Organic'],
-  starterMenu: ['Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad'],
-  mainMenu: ['Pizza', 'Pasta', 'Risotto'],
+// const restaurant = {
+//   name: 'Classico Italiano',
+//   location: 'Via Angelo Tavanti 23, Firenze, Italy',
+//   categories: ['Italian', 'Pizzeria', 'Vegetarian', 'Organic'],
+//   starterMenu: ['Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad'],
+//   mainMenu: ['Pizza', 'Pasta', 'Risotto'],
 
-  order: function (starterIndex, mainIndex) {
-    return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
-  },
+//   order: function (starterIndex, mainIndex) {
+//     return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
+//   },
 
-  openingHours: {
-    thu: {
-      open: 12,
-      close: 22,
-    },
-    fri: {
-      open: 11,
-      close: 23,
-    },
-    sat: {
-      open: 0, // Open 24 hours
-      close: 24,
-    },
-  },  
-
-  orderDelivery: function({sat}) {
-    return console.log(sat)
-  }
-};
-
-const { name, openingHours, categories } = restaurant;
-
-restaurant.orderDelivery(openingHours);
-
-
-// const {sat: day} = restaurant.openingHours;
-
-// console.log(day)
-
-
-// DESESTRUCTURE OBJECTS
-
-
-
-// console.log(name, openingHours, categories);
-
-
-
-// const {
-//   name: restaurantName,
-//   openingHours: hours,
-//   categories: tags,
-// } = restaurant;
-
-// console.log(restaurantName, hours, tags);
-
-
-// // DEFAULT VALUES
-
-// const {menu = [], starterMenu: startes =[]} = restaurant;
-
-// console.log(menu, startes);
-
-// MUTATING VARIABLES
-
-// let a = 111;
-// let b = 999;
-
-// const obj = {
-//   a: 3, b: 8
+//   openingHours: {
+//     thu: {
+//       open: 12,
+//       close: 22,
+//     },
+//     fri: {
+//       open: 11,
+//       close: 23,
+//     },
+//     sat: {
+//       open: 0, // Open 24 hours
+//       close: 24,
+//     },
+//   },
 // };
-
-
-// ({a, b} = obj);
-// console.log(a, b)
-
-
-// const { fri: {close, open}} = openingHours;
-
-// console.log(close, open);
-
-/*
-const { fri: {close, open}} = restaurant.openingHours;
-console.log(close, open)
-*/
-
-// const { fri: {close: o, open: x}} = openingHours;
-
-// console.log(o, x);
-
-
-
 
 
 // NESTED DESESTRUCTURING
@@ -185,8 +168,3 @@ console.log(close, open)
     // Data needed for a later exercise
     // const flights =
     //   '_Delayed_Departure;fao93766109;txl2133758440;11:25+_Arrival;bru0943384722;fao93766109;11:45+_Delayed_Arrival;hel7439299980;fao93766109;12:05+_Departure;fao93766109;lis2323639855;12:30';
-
-
-
-
-  
