@@ -1,5 +1,78 @@
 'use strict';
 
+const restaurant = {
+    name: 'Classico Italiano',
+    location: 'Via Angelo Tavanti 23, Firenze, Italy',
+    categories: ['Italian', 'Pizzeria', 'Vegetarian', 'Organic'],
+    starterMenu: ['Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad'],
+    mainMenu: ['Pizza', 'Pasta', 'Risotto'],
+
+    order: function (starterIndex, mainIndex) {
+        return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
+    },
+
+    openingHours: {
+        thu: {
+            open: 12,
+            close: 22,
+        },
+        fri: {
+            open: 11,
+            close: 23,
+        },
+        sat: {
+            open: 0, // Open 24 hours
+            close: 24,
+        },
+    },
+};
+
+
+
+
+const rest1 = {
+    name: 'DiMaria Ferdinando',
+    numGuests: 0
+    // numGuests: 192
+};
+
+const rest2 = {
+    name: 'Lazzana tomato',
+    owner: 'Nicolai Domingos'
+};
+
+// rest1.owner = rest1.name && 'Hey!';
+// rest2.owner = rest2.owner && 'Hey!';
+
+rest1.name &&= 'Hey!';
+rest2.owner &&= 'Hey!';
+
+console.log(rest1.name);
+console.log(rest2.owner);
+
+
+// OR ASSIGMENT OPERATOR
+
+// rest1.numGuests = rest1.numGuests || 10;
+// rest2.numGuests = rest2.numGuests || 10;
+
+
+// rest1.numGuests ||= 10;
+// rest2.numGuests ||= 10;
+
+
+// NULLISH ASSIGMENT OPERATOR
+// rest1.numGuests ??= 10;
+// rest2.numGuests ??= 10;
+
+
+
+// console.log(rest1.numGuests);
+// console.log(rest2.numGuests);
+
+
+
+
 
 // use any data type, return any data type, short-circuting;
 
@@ -36,16 +109,16 @@
 
 // THE NULLISH COALESCING OPERATOR;
 
-const me = {
-    name: 'Elvis'
-}
+// const me = {
+//     name: 'Elvis'
+// }
 
-// me.age = 12;
+// // me.age = 12;
 
-// Nullish: null and undefined (not 0 or '');
+// // Nullish: null and undefined (not 0 or '');
 
-me.age = 0;
-console.log(me.age ?? me.name);
+// me.age = 0;
+// console.log(me.age ?? me.name);
 
 
 

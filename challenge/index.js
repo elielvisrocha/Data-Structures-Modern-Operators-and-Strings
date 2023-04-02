@@ -41,8 +41,7 @@ const game = {
 };
 
 
-let [players1]  = game.players;
-let [, players2]  = game.players;
+let [players1, players2]  = game.players;
 
 console.log(players1);
 console.log(players2);
@@ -51,13 +50,13 @@ console.log(players2);
 
 
 
-// const [ goalkeeperBayern, ...fieldPlayersBayern ] = players1;
-// console.log(goalkeeperBayern);
-// console.log(fieldPlayersBayern);
+const [ goalkeeperBayern, ...fieldPlayersBayern ] = players1;
+console.log(goalkeeperBayern);
+console.log(fieldPlayersBayern);
 
-// const [ goalkeeperBorussia, ...fieldPlayerBorussia ] = players2;
-// console.log(goalkeeperBorussia);
-// console.log(fieldPlayerBorussia);
+const [ goalkeeperBorussia, ...fieldPlayerBorussia ] = players2;
+console.log(goalkeeperBorussia);
+console.log(fieldPlayerBorussia);
 
 
 const allPlayers = [...players1, ...players2];
@@ -70,18 +69,8 @@ const players1Final = ['Thiago', 'Coutinho', 'Perisic', ...players1];
 console.log(players1Final);
 
 
-const { team1: chanceOfWin1, x: draw, team2: chanceOfWin2 } = game.odds;
+const { odds: { team1: team1, x: draw, team2: team2 } } = game;
 
-console.log(chanceOfWin1);
-console.log(chanceOfWin2);
-
-
-
-const compareChanceOfWinTheGame = function (x, y) {
-    let teams = x >= y;
-
-
-}
 
 
 
@@ -95,11 +84,32 @@ const compareChanceOfWinTheGame = function (x, y) {
 // console.log(teamWithMoreChanceOfVictory && game.team2);
 
 
-console.log(game.odds.team1);
-
-
-let c = game.odds.team1 >= game.odds.team2;
-
-console.log(c || game.team1);
+team1 < team2 && console.log(`team1 is more likely to win!`);
 
 // console.log(chanceOfWin1 >= chanceOfWin2 || chanceOfWin2 >= chanceOfWin1);
+
+
+
+/* 
+  scored: ['Lewandowski', 'Gnarby', 'Lewandowski',
+        'Hummels'],
+    date: 'Nov 9th, 2037',
+*/
+
+
+// function showGoals(printGoals) {
+//     const players = [...printGoals];
+
+//     for (let i = 0; i < players.length; i++) {
+//         console.log(`The ${players[i]} did 1 goal`);
+
+//         if (players[i] === 'Lewandowski') {
+//             console.log(`This player did 2 goals`);
+//         }
+//     }
+// }
+
+
+// showGoals(game.scored);
+
+
