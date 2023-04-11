@@ -240,9 +240,9 @@
 
 
 
-    // Data needed for a later exercise
-    // const flights =
-    //   '_Delayed_Departure;fao93766109;txl2133758440;11:25+_Arrival;bru0943384722;fao93766109;11:45+_Delayed_Arrival;hel7439299980;fao93766109;12:05+_Departure;fao93766109;lis2323639855;12:30';
+// Data needed for a later exercise
+// const flights =
+//   '_Delayed_Departure;fao93766109;txl2133758440;11:25+_Arrival;bru0943384722;fao93766109;11:45+_Delayed_Arrival;hel7439299980;fao93766109;12:05+_Departure;fao93766109;lis2323639855;12:30';
 
 
 
@@ -275,4 +275,74 @@
 
 
 
+
+
+
+
+
+
+// const restaurant = {
+//     name: 'Classico Italiano',
+//     location: 'Via Angelo Tavanti 23, Firenze, Italy',
+//     categories: ['Italian', 'Pizzeria', 'Vegetarian', 'Organic'],
+//     starterMenu: ['Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad'],
+//     mainMenu: ['Pizza', 'Pasta', 'Risotto'],
+//     hours: {
+//         thu: {
+//             open: 12,
+//             close: 22,
+//         },
+//         fri: {
+//             open: 11,
+//             close: 23,
+//         },
+//         sat: {
+//             open: 0, // Open 24 hours
+//             close: 24,
+//         }
+//     }
+// };
+
+
+// const days = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'];
+
+// for (const day of days) {
+//     const open = restaurant.hours[day]?.open ?? 'close';
+//     console.log(`On ${day}, we open at ${open}`);
+// }
+
+
+
+
+// ARRAYS
+//IF OR ELSE
+
+// const date = { birth: 16 }
+
+// console.log(date?.birth ?? 'hey');
+
+
+// const user = [{ name: 'Elvis', email: 'hello@jelvis.io' }];
+
+
+
+// console.log(user[0]?.name ?? 'User array empty');
+
+
+
+
+
+
+
+
+
+const describeBe = {
+    age: 19,
+    name: 'elvis',
+    status: 'alone forever'
+}
+
+
+
+console.log(Object.values(describeBe));
 
