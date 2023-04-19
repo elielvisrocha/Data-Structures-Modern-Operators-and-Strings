@@ -336,13 +336,101 @@
 
 
 
-const describeBe = {
-    age: 19,
-    name: 'elvis',
-    status: 'alone forever'
+// const describeBe = {
+//     age: 19,
+//     name: 'elvis',
+//     status: 'alone forever'
+// }
+
+
+
+// console.log(Object.values(describeBe));
+
+
+
+
+// let myMap = new Map();
+
+
+// myMap.set(document.querySelector("h1"), document.querySelector('h1').textContent);
+
+// console.log(myMap);
+
+
+
+
+
+
+
+// const questions = new Map([
+//     ['question', 'What\'s the best programming language in the world?'],
+//     [1, 'C'],
+//     [2, 'Java'],
+//     [3, 'Javascript'],
+//     ['correct', 3],
+//     [true, 'correct!!!'],
+//     [false, 'Try again!']
+// ]);
+
+
+// console.log(questions);
+
+// //Quiz app
+// console.log(questions.get('question'));
+
+// for(let [key, value] of questions) {
+//     if (typeof key === 'number') console.log(`
+//         Answer ${key}: ${value}
+//     `);
+// }
+
+// const answer = +prompt('Your answer');
+
+// answer === 3 ? console.log(questions.get(true)) : console.log(questions.get(false));
+
+
+
+
+const gameEvents = new Map([
+    [17, '⚽️ GOAL'],
+    [36, '🔁 Substitution'],
+    [47, '⚽️ GOAL'],
+    [61, '🔁 Substitution'],
+    [64, '🔶 Yellow card'],
+    [69, '🔴 Red card'],
+    [70, '🔁 Substitution'],
+    [72, '🔁 Substitution'],
+    [76, '⚽️ GOAL'],
+    [80, '⚽️ GOAL'],
+    [92, '🔶 Yellow card'],
+]);
+
+
+const events = [...new Set(gameEvents.values())];
+// console.log(events);
+
+
+
+const time = [...gameEvents.keys()].pop();
+console.log(time);
+console.log(`An event happened, on average, every ${time / gameEvents.size} minutes`);
+
+
+
+for (const [min, event] of gameEvents) {
+    const half = min <= 45 ? 'FIRST' : 'SECOND';
+    console.log(`[${half} HALF] ${min}: ${event}`);
 }
 
 
+// for (let x of events.values()) {
+//     console.log(x.includes('GOAL') ? `[FIRST HALF] 17 ${x}` : '');
+// }
 
-console.log(Object.values(describeBe));
 
+
+
+
+// gameEvents.delete(64);
+
+// console.log(gameEvents);
